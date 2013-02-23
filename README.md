@@ -1,4 +1,4 @@
-asmPdp11
+asmpdp11
 ========
 
-Vim syntax for PDP11-40
+Vim syntax for PDP11-40 machine language.
