@@ -66,29 +66,29 @@ syn match asmpdp11Opcode /\<xor\s/ " exclusive OR
 
 " PROGRAM CONTROL
 " Branch
-syn match asmpdp11Opcode /\<br/ " branch (unconditional)
-syn match asmpdp11Opcode /\<bne/ " branch if not equal (to zero)
-syn match asmpdp11Opcode /\<beq/ " branch if equal (to zero)
-syn match asmpdp11Opcode /\<bpl/ " branch if plus
-syn match asmpdp11Opcode /\<bmi/ " branch if minus
-syn match asmpdp11Opcode /\<bvc/ " branch if overflow is clear
-syn match asmpdp11Opcode /\<bvs/ " branch if overflow is set
-syn match asmpdp11Opcode /\<bcc/ " branch if carry is clear
-syn match asmpdp11Opcode /\<bcs/ " branch if carry is set
+syn match asmpdp11Opcode /\<br\s/ " branch (unconditional)
+syn match asmpdp11Opcode /\<bne\s/ " branch if not equal (to zero)
+syn match asmpdp11Opcode /\<beq\s/ " branch if equal (to zero)
+syn match asmpdp11Opcode /\<bpl\s/ " branch if plus
+syn match asmpdp11Opcode /\<bmi\s/ " branch if minus
+syn match asmpdp11Opcode /\<bvc\s/ " branch if overflow is clear
+syn match asmpdp11Opcode /\<bvs\s/ " branch if overflow is set
+syn match asmpdp11Opcode /\<bcc\s/ " branch if carry is clear
+syn match asmpdp11Opcode /\<bcs\s/ " branch if carry is set
 " Signed Conditional Branch
-syn match asmpdp11Opcode /\<bge/ " branch if greater than or equal (to zero)
-syn match asmpdp11Opcode /\<blt/ " branch if less than (zero)
-syn match asmpdp11Opcode /\<bgt/ " branch if greater than (zero)
-syn match asmpdp11Opcode /\<ble/ " branch if less than or equal (to zero)
+syn match asmpdp11Opcode /\<bge\s/ " branch if greater than or equal (to zero)
+syn match asmpdp11Opcode /\<blt\s/ " branch if less than (zero)
+syn match asmpdp11Opcode /\<bgt\s/ " branch if greater than (zero)
+syn match asmpdp11Opcode /\<ble\s/ " branch if less than or equal (to zero)
 " Unsigned Conditional Branch
-syn match asmpdp11Opcode /\<bhi/ " branch if higher
-syn match asmpdp11Opcode /\<blos/ " branch if lower or same
-syn match asmpdp11Opcode /\<bhis/ " branch if higher or same
-syn match asmpdp11Opcode /\<blo/ " branch if lower
+syn match asmpdp11Opcode /\<bhi\s/ " branch if higher
+syn match asmpdp11Opcode /\<blos\s/ " branch if lower or same
+syn match asmpdp11Opcode /\<bhis\s/ " branch if higher or same
+syn match asmpdp11Opcode /\<blo\s/ " branch if lower
 " Jump and Subroutine
 syn match asmpdp11Opcode /\<jmp\s/ " jump
 syn match asmpdp11Opcode /\<jsr\s/ " jump to subroutine
-syn match asmpdp11Opcode /\<rts/ " return from subroutine
+syn match asmpdp11Opcode /\<rts\s/ " return from subroutine
 syn match asmpdp11Opcode /\<mark/ " mark
 syn match asmpdp11Opcode /\<sob\s/ " substract one and branch (if != 0)
 " Trap and Interrupt 
@@ -122,7 +122,7 @@ syn match asmpdp11Label /^\s*[a-z0-9_?.][a-z0-9_?.$]*:/he=e-1
 
 " Various number formats
 syn match asmpdp11OctNumber /\<[0-7]\+\>/
-syn match asmpdp11DecNumber /\<[0-9]\+\.\>/
+syn match asmpdp11DecNumber /\<[0-9]\+\./
 
 " Immediate data
 syn match asmpdp11Immediate /\$[0-9]\+\./ contains=asmpdp11DecNumber
